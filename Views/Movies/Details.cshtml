@@ -1,0 +1,61 @@
+﻿<!--
+    A instrução (arroba)model na parte superior do arquivo de exibição especifica o tipo de
+    objeto que a exibição espera. Quando o controlador de filme foi criado, a seguinte
+    instrução (arroba)model foi incluída:
+-->
+<!--
+    Essa diretiva (arroba)model permite o acesso ao filme que o controlador passou para a exibição.
+    O objeto Model é fortemente tipado. Por exemplo, na exibição Details.cshtml, o código passa
+    cada campo de filme para os Auxiliares de HTML DisplayNameFor e DisplayFor com o objeto Model
+    fortemente tipado. Os métodos Create e Edit e as exibições também passam um objeto de modelo
+    Movie.
+-->
+
+@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
