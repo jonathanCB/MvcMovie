@@ -55,6 +55,19 @@ namespace MvcMovie.Models
         [StringLength(30)]
         public string Genre { get; set; }
 
+        /*  ---------------- rowversion ---------------------
+            O valor rowversion é um número sequencial que é incrementado sempre que a linha é atualizada. 
+            Em um comando Update ou Delete, a cláusula Where inclui o valor original da coluna de 
+            acompanhamento (a versão de linha original). Se a linha que está sendo atualizada tiver sido 
+            alterada por outro usuário, o valor da coluna rowversion será diferente do valor original; portanto, 
+            a instrução Update ou Delete não poderá encontrar a linha a ser atualizada devido à cláusula Where. 
+            Quando o Entity Framework descobre que nenhuma linha foi atualizada pelo comando Update ou Delete 
+            (ou seja, quando o número de linhas afetadas é zero), ele interpreta isso como um conflito de 
+            simultaneidade. 
+        */
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
         /*  ---------------- [Column(TypeName = "decimal(18, 2)")] ---------------------
             A anotação de dados [Column(TypeName = "decimal(18, 2)")] é necessária 
             para que o Entity Framework Core possa mapear corretamente o Price para 
@@ -63,7 +76,7 @@ namespace MvcMovie.Models
         // O atributo Range restringe um valor a um intervalo especificado.
         [Range(1, 100)]
         [DataType(DataType.Currency)]
-        //[Column(TypeName = "decimal(18, 2)")]
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
         /* ---------------- StringLength ---------------------

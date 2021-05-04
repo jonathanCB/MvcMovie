@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\Geral\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\obj\\",
+        "outputPath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Geral\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5j9/ye6uK1+3NOGsw6+RijEP1VtLqJUcA85JvGODeThzoXo49lj8cqBeoWj7+KrHhNX4tELtiLalRRGdfwGV6w==",
+  "dgSpecHash": "avmtmSgvOTu+x7OmRQroVXKIi8SmKz5KTNkFzwbz8lWwoU0vwlxVmLcvLZumzYJ5ythpJd0pNR8q1B799Ay9LQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
+  "projectFilePath": "C:\\Users\\Geral\\Google Drive\\Faculdade\\5º Semestre\\Programação de Software Aplicado\\Aula 10 - Exercício de fixação\\Exercício_fixacao\\MvcMovie\\MvcMovie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Geral\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Geral\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
