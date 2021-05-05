@@ -65,6 +65,10 @@ namespace MvcMovie.Models
             (ou seja, quando o número de linhas afetadas é zero), ele interpreta isso como um conflito de 
             simultaneidade. 
         */
+        /*  ---------------- Timestamp ---------------------
+            O atributo Timestamp especifica que essa coluna será incluída na cláusula Where de comandos 
+            Update e Delete enviados ao banco de dados. 
+        */
         [Timestamp]
         public byte[] RowVersion { get; set; }
 
@@ -74,9 +78,9 @@ namespace MvcMovie.Models
             a moeda no banco de dados. 
         */
         // O atributo Range restringe um valor a um intervalo especificado.
-        [Range(1, 100)]
+        //[Range(1, 100)]
         [DataType(DataType.Currency)]
-        [Column(TypeName = "decimal(18, 2)")]
+        //[Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
         /* ---------------- StringLength ---------------------
