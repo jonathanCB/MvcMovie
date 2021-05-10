@@ -303,7 +303,7 @@ namespace MvcMovie.Controllers
 
             return View(movieToUpdate);
         }
-
+        /*
         // GET: Movies/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -321,7 +321,39 @@ namespace MvcMovie.Controllers
 
             return View(movie);
         }
+        */
+        public async Task<IActionResult> Delete(int? id, bool? concurrencyError)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var movie = await _context.Movie
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (movie == null)
+            {
+                if (concurrencyError.GetValueOrDefault())
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                return NotFound();
+            }
+
+            if (concurrencyError.GetValueOrDefault())
+            {
+                ViewData["ConcurrencyErrorMessage"] = "The record you attempted to delete "
+                    + "was modified by another user after you got the original values. "
+                    + "The delete operation was canceled and the current values in the "
+                    + "database have been displayed. If you still want to delete this "
+                    + "record, click the Delete button again. Otherwise "
+                    + "click the Back to List hyperlink.";
+            }
+
+            return View(movie);
+        }
+
+        /*
         // POST: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -331,6 +363,26 @@ namespace MvcMovie.Controllers
             _context.Movie.Remove(movie);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        */
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(Movie movie)
+        {
+            try
+            {
+                if (await _context.Movie.AnyAsync(m => m.Id == movie.Id))
+                {
+                    _context.Movie.Remove(movie);
+                    await _context.SaveChangesAsync();
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.)
+                return RedirectToAction(nameof(Delete), new { concurrencyError = true, id = movie.Id });
+            }
         }
 
         private bool MovieExists(int id)
